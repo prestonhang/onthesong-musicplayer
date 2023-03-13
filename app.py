@@ -3,14 +3,15 @@
 # Used to initiate partner's microservice
 # Returns new file contents
 # Operates on XHTTPS fetch
-from flask import Flask, request, jsonify, render_template
+#######################################################
+
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from flask_cors import CORS
 import time
 
+
 app = Flask(__name__)
 CORS(app)
-
-
 
 @app.route("/")
 def home():
@@ -26,9 +27,12 @@ def microservice():
 
     time.sleep(4)
 
-    # Open and return file contents
     file = open(filepath, "r")
     return file.read()
+
+@app.route('/songs/dieforyou.mp3')
+def getDieForYou():
+    return send_from_directory(app.static_folder, '/static/songs/dieforyou.mp3')
 
 if __name__ == '__main__':
     app.run()

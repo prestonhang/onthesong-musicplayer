@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/7b5ed0e6-2767-4422-a77c-46250e3924a1/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/onthesong-musicplayer",
+    "appService.deploySubpath": "."
+}

@@ -16,7 +16,7 @@ var songs = [
         artist: "Joji",
         album: "SMITHEREENS",
         image: "https://i.scdn.co/image/ab67616d0000b273eaac2a7955f5b8967991cacb",
-        audio: "{{ url_for('static', filename='songs/dieforyou.mp3') }}"
+        audio: "/songs/dieforyou.mp3",
     },
     
     {   name: "16",
